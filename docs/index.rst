@@ -30,15 +30,15 @@ Examples
 
     >>> import pyautogui
 
-    >>> screenWidth, screenHeight = pyautogui.size() # Get the size of the primary monitor.
+    >>> screenWidth, screenHeight = pyautogui.size() # Получаем размер экрана.
     >>> screenWidth, screenHeight
     (2560, 1440)
 
-    >>> currentMouseX, currentMouseY = pyautogui.position() # Get the XY position of the mouse.
+    >>> currentMouseX, currentMouseY = pyautogui.position() # Получаем XY координаты курсора.
     >>> currentMouseX, currentMouseY
     (1314, 345)
 
-    >>> pyautogui.moveTo(100, 150) # Move the mouse to XY coordinates.
+    >>> pyautogui.moveTo(100, 150) # Перемещение курсора по координатам XY.
 
     >>> pyautogui.click()          # Click the mouse.
     >>> pyautogui.click(100, 200)  # Move the mouse to XY coordinates and click it.
