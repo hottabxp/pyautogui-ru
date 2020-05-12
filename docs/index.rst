@@ -3,26 +3,25 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to PyAutoGUI's documentation!
+Добро пожаловать на страницу перевода документации PyAutoGUI!
 =====================================
 
 
 API разработан таким образом, чтобы быть простым. PyAutoGUI работает в Windows, macOS и Linux, и поддерживает Python 2 и 3.
 
-Для установки, выполните ``pip install pyautogui``. See the :doc:`install` page for more details.
+Для установки, выполните ``pip install pyautogui``. Смотрите страницу :doc:`установки` для получения подробной информации.
 
 Исходный код доступен по адресу: https://github.com/asweigart/pyautogui
 
 В PyAutoGUI имеются следующие функции:
 
-* Moving the mouse and clicking in the windows of other applications.
-* Перемещение и клик мышки в окнах других приложений .
+* Перемещение и нажатие кнопок мыши в окнах других приложений .
 * Отправка нажатий клавиш в приложения( например, для заполнения форм)
-* Take screenshots, and given an image (for example, of a button or checkbox), and find it on the screen.
-* Locate an application's window, and move, resize, maximize, minimize, or close it (Windows-only, currently).
+* Делать скриншоты и читать изображения (например, кнопку или чекбокс) и находить его на экране.
+* Находить окна приложений, перемещать , изменять размер, максимизировать, минимизировать или закрыть их (на данный момент, только в Windows).
 * Паказывать диалоговые окна для предупреждений и сообщений.
 
-Here's `a YouTube video of a bot automatically playing the game Sushi Go Round <https://www.youtube.com/watch?v=lfk_T6VKhTE>`_. The bot watches the game's application window and searches for images of sushi orders. When it finds one, it clicks the ingredient buttons to make the sushi. It also clicks the phone in the game to order more ingredients as needed. The bot is completely autonomous and can finish all seven days of the game. This is the kind of automation that PyAutoGUI is capable of.
+`Вот видео на YouTybe, как бот играет в игру Sushi Go Round <https://www.youtube.com/watch?v=lfk_T6VKhTE>`_. Бот наблюдает за окном приложения игры и ищет изображения суши-заказов. Когда он находит один, он нажимает на ингредиенты, чтобы сделать суши. Он также кликает по телефону в игре, чтобы заказать больше ингредиентов по мере необходимости. Бот полностью автономный и может завершить все семь дней игры. Это тот вид автоматизации, на который способен PyAutoGUI.
 
 Примеры
 ========
@@ -41,11 +40,11 @@ Here's `a YouTube video of a bot automatically playing the game Sushi Go Round <
 
     >>> pyautogui.moveTo(100, 150) # Перемещение курсора по координатам XY.
 
-    >>> pyautogui.click()          # Клик мышки.
-    >>> pyautogui.click(100, 200)  # Перемещение мышки по XY координатам и клик по ним.
+    >>> pyautogui.click()          # Клик мыши.
+    >>> pyautogui.click(100, 200)  # Перемещение мыши по XY координатам и клик по ним.
     >>> pyautogui.click('button.png') # Поиск на экране совпадение с button.png и клик по нему.
 
-    >>> pyautogui.move(400, 0)      # Перемещение мышки вправо от текущей позиции на 400 пикселей
+    >>> pyautogui.move(400, 0)      # Перемещение мыши вправо от текущей позиции на 400 пикселей
     >>> pyautogui.doubleClick()    # Двойной клик.
     >>> pyautogui.moveTo(500, 500, duration=2, tween=pyautogui.easeInOutQuad)  # Use tweening/easing function to move mouse over 2 seconds.
 
@@ -75,28 +74,28 @@ Here's `a YouTube video of a bot automatically playing the game Sushi Go Round <
 
 .. image:: square_spiral.png
 
-The benefit of using PyAutoGUI, as opposed to a script that directly generates the image file, is that you can use the brush tools that MS Paint provides.
+Преимущество использования PyAutoGUI, в отличие от скрипта, который непосредственно генерирует файл изображения, заключается в том, что вы можете использовать инструменты кисти, которые предоставляет MS Paint.
 
-FAQ: Frequently Asked Questions
+FAQ: Часто задаваемые вопросы:
 ===============================
 
-Send questions to al@inventwithpython.com
+Вопросы присылайте на al@inventwithpython.com
 
-**Q: Can PyAutoGUI work on Android, iOS, or tablet/smartphone apps.**
+**Q: Может ли PyAutoGUI работать на Android, iOS или планшете/телефоне**
 
-A: Unfortunately no. PyAutoGUI only runs on Windows, macOS, and Linux.
+A: К сожалению нет. PyAutoGUI работает только на Windows, macOS и Linux.
 
-**Q: Does PyAutoGUI work on multi-monitor setups.**
+**Q: Работает ли PyAutoGUI с несколькими мониторами.**
 
-A: No, right now PyAutoGUI only handles the primary monitor.
+A: Нет, сейчас PyAutoGUI работает только с основным монитором.
 
-**Q: Does PyAutoGUI do OCR?**
+**Q: PyAutoGUI распознает символы на изображении(OCR)?**
 
-A: No, but this is a feature that's on the roadmap.
+A: Нет, но это вожможно появится в будущем.
 
-**Q: Can PyAutoGUI do keylogging, or detect if a key is currently pressed down?**
+**Q: Может ли PyAutoGUI логировать клавиши, или определять, нажата лы клавиша в данный момент?**
 
-A: No, PyAutoGUI cannot do this currently.
+A: Нет, PyAutoGUI не может делать это сейчас.
 
 
 Fail-Safes
