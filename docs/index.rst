@@ -7,23 +7,24 @@ Welcome to PyAutoGUI's documentation!
 =====================================
 
 
-PyAutoGUI lets your Python scripts control the mouse and keyboard to automate interactions with other applications. The API is designed to be simple. PyAutoGUI works on Windows, macOS, and Linux, and runs on Python 2 and 3.
+API разработан таким образом, чтобы быть простым. PyAutoGUI работает в Windows, macOS и Linux, и поддерживает Python 2 и 3.
 
-To install with pip, run ``pip install pyautogui``. See the :doc:`install` page for more details.
+Для установки, выполните ``pip install pyautogui``. See the :doc:`install` page for more details.
 
-The source code is available on: https://github.com/asweigart/pyautogui
+Исходный код доступен по адресу: https://github.com/asweigart/pyautogui
 
-PyAutoGUI has several features:
+В PyAutoGUI имеются следующие функции:
 
 * Moving the mouse and clicking in the windows of other applications.
-* Sending keystrokes to applications (for example, to fill out forms).
+* Перемещение и клик мышки в окнах других приложений .
+* Отправка нажатий клавиш в приложения( например, для заполнения форм)
 * Take screenshots, and given an image (for example, of a button or checkbox), and find it on the screen.
 * Locate an application's window, and move, resize, maximize, minimize, or close it (Windows-only, currently).
-* Display alert and message boxes.
+* Паказывать диалоговые окна для предупреждений и сообщений.
 
 Here's `a YouTube video of a bot automatically playing the game Sushi Go Round <https://www.youtube.com/watch?v=lfk_T6VKhTE>`_. The bot watches the game's application window and searches for images of sushi orders. When it finds one, it clicks the ingredient buttons to make the sushi. It also clicks the phone in the game to order more ingredients as needed. The bot is completely autonomous and can finish all seven days of the game. This is the kind of automation that PyAutoGUI is capable of.
 
-Examples
+Примеры
 ========
 
 .. code:: python
@@ -40,37 +41,37 @@ Examples
 
     >>> pyautogui.moveTo(100, 150) # Перемещение курсора по координатам XY.
 
-    >>> pyautogui.click()          # Click the mouse.
-    >>> pyautogui.click(100, 200)  # Move the mouse to XY coordinates and click it.
-    >>> pyautogui.click('button.png') # Find where button.png appears on the screen and click it.
+    >>> pyautogui.click()          # Клик мышки.
+    >>> pyautogui.click(100, 200)  # Перемещение мышки по XY координатам и клик по ним.
+    >>> pyautogui.click('button.png') # Поиск на экране совпадение с button.png и клик по нему.
 
-    >>> pyautogui.move(400, 0)      # Move the mouse 400 pixels to the right of its current position.
-    >>> pyautogui.doubleClick()    # Double click the mouse.
+    >>> pyautogui.move(400, 0)      # Перемещение мышки вправо от текущей позиции на 400 пикселей
+    >>> pyautogui.doubleClick()    # Двойной клик.
     >>> pyautogui.moveTo(500, 500, duration=2, tween=pyautogui.easeInOutQuad)  # Use tweening/easing function to move mouse over 2 seconds.
 
-    >>> pyautogui.write('Hello world!', interval=0.25)  # type with quarter-second pause in between each key
-    >>> pyautogui.press('esc')     # Press the Esc key. All key names are in pyautogui.KEY_NAMES
+    >>> pyautogui.write('Hello world!', interval=0.25)  # Печатаем текст с паузой в четверть секунды для каждого нажатия клавиши.
+    >>> pyautogui.press('esc')     # Нажимаем клавишу ESC. Имена всех клавиш в pyautogui.KEY_NAMES
 
-    >>> pyautogui.keyDown('shift') # Press the Shift key down and hold it.
-    >>> pyautogui.press(['left', 'left', 'left', 'left']) # Press the left arrow key 4 times.
-    >>> pyautogui.keyUp('shift')   # Let go of the Shift key.
+    >>> pyautogui.keyDown('shift') # Нажимаем и удерживаем клавишу SHIFT.
+    >>> pyautogui.press(['left', 'left', 'left', 'left']) # Нажимаем клавишу ВЛЕВО 4 раза.
+    >>> pyautogui.keyUp('shift')   # Отпускаем клавишу SHIFT.
 
-    >>> pyautogui.hotkey('ctrl', 'c') # Press the Ctrl-C hotkey combination.
+    >>> pyautogui.hotkey('ctrl', 'c') # Нажимаем комбинацию Ctrl-C.
 
-    >>> pyautogui.alert('This is the message to display.') # Make an alert box appear and pause the program until OK is clicked.
+    >>> pyautogui.alert('This is the message to display.') # Создаем диалоговое окно с предупреждением, и приостанавливаем программу, пока не нажата кнопка 'OK'
 
-This example drags the mouse in a square spiral shape in MS Paint (or any graphics drawing program):
+Этот пример перемещает мышь в виде квадратной спирали в MS Paint(или любой другой программе для рисования)
 
 .. code:: python
 
     >>> distance = 200
     >>> while distance > 0:
-            pyautogui.drag(distance, 0, duration=0.5)   # move right
+            pyautogui.drag(distance, 0, duration=0.5)   # двигаем вправо
             distance -= 5
-            pyautogui.drag(0, distance, duration=0.5)   # move down
-            pyautogui.drag(-distance, 0, duration=0.5)  # move left
+            pyautogui.drag(0, distance, duration=0.5)   # двигаем вниз
+            pyautogui.drag(-distance, 0, duration=0.5)  # двигаем влево
             distance -= 5
-            pyautogui.drag(0, -distance, duration=0.5)  # move up
+            pyautogui.drag(0, -distance, duration=0.5)  # двигаем вверх
 
 .. image:: square_spiral.png
 
