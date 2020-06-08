@@ -17,7 +17,7 @@ Windows
 
     ``py -m pip install pyautogui``
 
-Если у вас установлено несколько версий Python, вы можете выбрать конкретную версию, передав её в командной стороке ``py``. Например, для Python 3.8, выполните:
+Если у вас установлено несколько версий Python, вы можете выбрать конкретную версию, передав её в командной строке ``py``. Например, для Python 3.8, выполните:
 
     ``py -3.8 -m pip install pyautogui``
 
@@ -49,4 +49,4 @@ Linux
 
     ``sudo apt-get install python3-dev``
 
-PyAutoGUI установить зависимые модули, включая PyTweening, PyScreeze, PyGetWindow, PymsgBox, and MouseInfo.
+PyAutoGUI установить зависимые модули, включая PyTweening, PyScreeze, PyGetWindow, PymsgBox, и MouseInfo.
